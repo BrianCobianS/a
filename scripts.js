@@ -1,7 +1,6 @@
-import inventory from "./Setinventory.js";
-import ansible from "./Ansible.js";
+
+import now from "./Now.js";
 import shel from "./shell.js";
-import del from "./Deletetrash.js";
 
 
 const API = (req,res) =>{
@@ -19,11 +18,9 @@ const API = (req,res) =>{
         // console.log(Controladores[i].fecha)
         if (Controladores[i].fecha!= 'Now'){
             // console.log(Controladores[i].fecha)
-            shel(Controladores[i])
+            shel(Controladores[i]);
         }else{
-            inventory(Controladores[i])
-            ansible(Controladores[i])
-            del(Controladores[i])
+            now(Controladores[i]);
         }
     }    
     res.json({msg:`Recibiendo Controladores`})   
