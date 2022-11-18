@@ -1,0 +1,28 @@
+import sys
+IP=(sys.argv[1])
+USR=(sys.argv[2])
+PASS=(sys.argv[3])
+OPC=(sys.argv[4])
+LEV=(sys.argv[5])
+ASM=(sys.argv[6])
+VERSION=(sys.argv[7])
+PAQUETES=(sys.argv[8])
+FECHA=(sys.argv[9])
+EMAIL=(sys.argv[10])
+print(IP,USR,PASS,OPC,LEV,ASM,FECHA,VERSION,PAQUETES,EMAIL)
+contenido = open("/home/ebossteam/UnattendedInstallation/FULLSTACK/mails/email.txt").read().splitlines()
+contenido.insert(2,"    ip: '"+IP+"',")
+contenido.insert(2,"    usr: '"+USR+"',")
+contenido.insert(2,"    pass: '"+PASS+"',")
+contenido.insert(2,"    email: '"+EMAIL+"',")
+contenido.insert(2,"    nivel: '"+LEV+"',")
+contenido.insert(2,"    version: '"+VERSION+"',")
+contenido.insert(2,"    paquetes: '"+PAQUETES+"',")
+contenido.insert(2,"    ASM: '"+ASM+"',")
+contenido.insert(2,"    fecha: '"+FECHA+"',")
+contenido.insert(2,"    opc: '"+OPC+"',")
+f = open('/home/ebossteam/UnattendedInstallation/FULLSTACK/mails/mail.js', "w")
+#pruebas  python .\email.py 12.12.12 master m1 1 brian.cobian@alumnos.udg.mx 12.ver12 accept Morty ACE3DYEPS 12712/12
+f.writelines("\n".join(contenido))
+f.close
+
