@@ -15,7 +15,7 @@ contenido = open("/home/ebossteam/UnattendedInstallation/FULLSTACK/Back-End/publ
 print(contenido)
 contenido.insert(1,"mkdir /home/ebossteam/temp/"+IP)
 print("mkdir /home/ebossteam/temp/"+IP)
-contenido.insert(2,"cp -r /home/ebossteam/ansibletest/ansible/* /home/ebossteam/home/ebossteam/temp/"+IP)
+contenido.insert(2,"cp -r /home/ebossteam/ansibletest/ansible/* /home/ebossteam/temp/"+IP)
 print("cp -r /home/ebossteam/ansibletest/ansible/* /home/ebossteam/temp/"+IP)
 contenido.insert(3,"python3 /home/ebossteam/UnattendedInstallation/FULLSTACK/Back-End/public/Inventories/Inventory.py "+IP+" "+USR+" "+PASS)
 print("python3 /home/ebossteam/UnattendedInstallation/FULLSTACK/Back-End/public/Inventories/Inventory.py "+IP+" "+USR+" "+PASS)
